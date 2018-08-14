@@ -43,8 +43,8 @@ devtools::use_data(analysts, analystPositions, sites, siteTables,nfl_missing,
 
 nflstats <- data.table::data.table(read.csv("data-raw/nflstats.csv", stringsAsFactors = FALSE))
 yahooStats <- data.table::data.table(read.csv("data-raw/yahooStats.csv", stringsAsFactors = FALSE))
-yahooCred <- list(key = "dj0yJmk9T09TRjdkWWR3TUpLJmQ9WVdrOVRuZFVURVF6TXpJbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1jOQ--",
-                  secret = "418b1e7115f1b15557fe4c773f79ba1ab51e3b63")
+yahooCred <- list(key = "dj0yJmk9UmY2YWVwS3A0aVhzJmQ9WVdrOU1HSkJPRlJWTm1VbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD05Yg--",
+                  secret = "36d74d3836665f1b4a2508664ffddab2dd1d4476")
 
 yahoo_endpoint <- httr::oauth_endpoints("yahoo")
 yahoo_app <- httr::oauth_app("yahoo", key = yahooCred$key, secret = yahooCred$secret)
