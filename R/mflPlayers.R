@@ -21,7 +21,7 @@
 #' @import data.table
 #' @export mflPlayers
 mflPlayers <- function(season = 2016, weekNo = 0, pos = position.name){
-  mflData <- XML::xmlToList(paste("http://football.myfantasyleague.com/", season,
+  mflData <- XML::xmlToList(paste("http://www51.myfantasyleague.com/", season,
                                   "/export?TYPE=players&L=&W=", weekNo, "&JSON=0&DETAILS=1", sep =""))
   mflData$.attrs <- NULL
   mflData <- data.table::rbindlist(lapply(mflData, function(pl)data.table::data.table(t(pl))), fill = TRUE)
